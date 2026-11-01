@@ -3,25 +3,102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WhoHasMe</title>
-<meta name="description" content="A map of your identities, not a vault. Coming to iPhone and Mac.">
+<title>WhoHasMe: who has your email and number</title>
+<meta name="description" content="A private map of every place that has your email addresses, phone numbers and postal addresses. For iPhone and Mac. Nothing leaves your device.">
+<link rel="icon" href="assets/mark-tint.svg" type="image/svg+xml">
 <style>
-:root{color-scheme:light dark;--bg:#fff;--fg:#1c1c1e;--muted:#6c6c70;--tint:#0062cc;--line:#e5e5ea}
-@media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f2f2f7;--muted:#aeaeb2;--tint:#4da3ff;--line:#38383a}}
+:root{color-scheme:light dark;--bg:#fff;--fg:#1c1c1e;--muted:#6c6c70;--tint:#0062cc;--tint-fill:#0062cc;--line:#e5e5ea;--soft:#f2f2f7}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f2f2f7;--muted:#aeaeb2;--tint:#4da3ff;--tint-fill:#0a6cdb;--line:#38383a;--soft:#1c1c1e}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-main{max-width:680px;margin:0 auto;padding:56px 20px 40px}h1{font-size:34px;line-height:1.15;margin:0 0 8px}h2{font-size:20px;margin:32px 0 8px}
-p,li{color:var(--fg)}.muted{color:var(--muted)}a{color:var(--tint)}ul{padding-left:22px}
-footer{max-width:680px;margin:0 auto;padding:24px 20px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+a{color:var(--tint)}img{display:block;max-width:100%;height:auto}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 40px}.brand{display:flex;align-items:center;gap:10px;font-weight:600;margin-bottom:32px}.brand img{width:28px;height:28px}
+h1{font-size:clamp(38px,8vw,60px);line-height:1.05;letter-spacing:-.02em;margin:0 0 16px;max-width:14em}
+.lead{font-size:clamp(19px,3vw,22px);line-height:1.4;color:var(--muted);margin:0 0 28px;max-width:32em}
+.button{display:inline-block;background:var(--tint-fill);color:#fff;font-weight:600;text-decoration:none;padding:13px 22px;border-radius:12px}
+.note{font-size:14px;color:var(--muted);margin:12px 0 0}
+.feature{display:grid;grid-template-columns:1fr minmax(0,320px);gap:48px;align-items:center;padding:48px 0;border-top:1px solid var(--line)}
+.feature img{border-radius:24px;border:1px solid var(--line)}
+h2{font-size:clamp(27px,5vw,36px);line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}.feature p{margin:0;max-width:30em}
+.mac{padding:48px 0;border-top:1px solid var(--line)}.mac p{margin:0 0 28px;max-width:34em}.mac img{border-radius:12px;border:1px solid var(--line)}
+.proof{background:var(--soft);border-radius:20px;padding:32px;margin:16px 0 48px}.proof ul{margin:16px 0 0;padding-left:22px}.proof li{margin:6px 0}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 0 48px}.facts h3{font-size:17px;margin:0 0 4px}.facts p{margin:0;color:var(--muted);font-size:15px}
+.final{text-align:center;padding:48px 0 64px;border-top:1px solid var(--line)}.final .sign{color:var(--muted);margin:0 0 24px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:24px 0 48px}footer a{margin-right:16px}
+@media (max-width:680px){header{padding-top:40px}.feature{grid-template-columns:1fr;gap:28px}.feature img{max-width:300px;margin:0 auto}.facts{grid-template-columns:1fr}.proof{padding:24px}}
 </style>
 </head>
 <body>
-<main>
-  <h1>WhoHasMe</h1>
-  <p class="muted">A map of your identities, not a vault.</p>
-  <p>Know which places have your email addresses, phone numbers and address, keep the parts of your life apart, and update everything when something changes. Nothing leaves your device, and it never stores passwords.</p>
-  <p>Coming to iPhone and Mac.</p>
-  <p><a href="privacy/">Privacy policy</a></p>
-</main>
-<footer>© 2026 Thava. All rights reserved.</footer>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <picture><source srcset="assets/mark-tint-dark.svg" media="(prefers-color-scheme: dark)"><img src="assets/mark-tint.svg" alt=""></picture>
+      WhoHasMe
+    </div>
+    <h1>Who has your email &amp; number?</h1>
+    <p class="lead">A private map of every place that has your email addresses, phone numbers and postal addresses. Coming to iPhone and Mac.</p>
+    <!-- DRAFT: replace with the provider's hosted form URL before publishing. -->
+    <a class="button" href="#SIGNUP_URL">Tell me when it launches</a>
+    <p class="note">A few emails around launch, then only major news. <a href="privacy/#email-list">How the list works</a>.</p>
+  </header>
+
+  <section class="feature">
+    <div>
+      <h2>See every place, and how it uses you</h2>
+      <p>Pick an email or number and see the count: which places have it, in which role (login, recovery, 2FA, shipping), and in which space. You fill it in yourself, in seconds. Nothing is scanned.</p>
+    </div>
+    <picture><source srcset="assets/S03-IdentitySummary-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/S03-IdentitySummary.png" width="780" height="1688" loading="lazy" alt="An email address used in several places, split by space and role, using sample data."></picture>
+  </section>
+
+  <section class="feature">
+    <div>
+      <h2>Change numbers, skip lockouts</h2>
+      <p>Retire an old number, email or address and pick its replacement. You get a checklist of every place to update, and the old one keeps its history, so you know who may still have it.</p>
+    </div>
+    <picture><source srcset="assets/S11-RetireReplace-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/S11-RetireReplace.png" width="780" height="1688" loading="lazy" alt="A Retire and Replace checklist of places to update, using sample data."></picture>
+  </section>
+
+  <section class="feature">
+    <div>
+      <h2>Keep your spaces apart</h2>
+      <p>Personal, Work, Shopping, a client. When a work email ends up at a personal place, or an alias forwards to a mailbox in another space, you see it as an issue. Fix it, or accept it if it's on purpose.</p>
+    </div>
+    <picture><source srcset="assets/S12-Spaces-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/S12-Spaces.png" width="780" height="1688" loading="lazy" alt="A list of spaces with their counts, using sample data."></picture>
+  </section>
+
+  <section class="mac">
+    <h2>A real Mac app, too</h2>
+    <p>Native on both. iPhone and Mac don't sync in this version: move your map between them with Export and Import.</p>
+    <picture><source srcset="assets/M01-Home-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/M01-Home.png" width="1600" height="1000" loading="lazy" alt="WhoHasMe on Mac, showing Home with a sidebar, using sample data."></picture>
+  </section>
+
+  <section class="proof">
+    <h2>Nothing leaves your device</h2>
+    <ul>
+      <li>No account, no server, no analytics.</li>
+      <li>No networking code, and the Mac app has no permission to use the network.</li>
+      <li>Planned App Store privacy label: Data Not Collected.</li>
+      <li>Locked with Face ID, Touch ID or your passcode or password, and backups encrypted by default.</li>
+      <li>Never asks for passwords or 2FA codes. Cards and documents keep the last 4 characters at most.</li>
+    </ul>
+  </section>
+
+  <section class="facts">
+    <div><h3>Online and offline</h3><p>Apps, banks and shops, and also your doctor, landlord and gym.</p></div>
+    <div><h3>Works with your aliases</h3><p>Any provider. See which alias went to which place.</p></div>
+    <div><h3>Free for 25 places</h3><p>Then $9.99 once for unlimited places. No subscription.</p></div>
+  </section>
+
+  <section class="final">
+    <h2>A map, not a vault.</h2>
+    <p class="sign">Keep your password manager. WhoHasMe works alongside it.</p>
+    <a class="button" href="#SIGNUP_URL">Tell me when it launches</a>
+  </section>
+
+  <footer>
+    <a href="privacy/">Privacy</a><a href="support/">Support</a>
+    <div>© 2026 Thava. All rights reserved. Images show sample data.</div>
+  </footer>
+</div>
 </body>
 </html>
